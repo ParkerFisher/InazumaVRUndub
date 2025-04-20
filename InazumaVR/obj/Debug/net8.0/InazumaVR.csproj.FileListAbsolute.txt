@@ -14,6 +14,7 @@
 /home/arch/InazumaVR/InazumaVR/obj/Debug/net8.0/ref/InazumaVR.dll
 /home/arch/InazumaVR/InazumaVR/obj/Debug/net8.0/InazumaVR.csproj.AssemblyReference.cache
 /home/arch/InazumaVR/InazumaVR/bin/Debug/net8.0/Newtonsoft.Json.dll
-/home/arch/InazumaVR/InazumaVR/obj/Debug/net8.0/InazumaVR.csproj.CopyComplete
 /home/arch/InazumaVR/InazumaVR/bin/Debug/net8.0/HtmlAgilityPack.dll
 /home/arch/InazumaVR/InazumaVR/bin/Debug/net8.0/HtmlAgilityPack.CssSelectors.dll
+/home/arch/InazumaVR/InazumaVR/obj/Debug/net8.0/InazumaVR.sourcelink.json
+/home/arch/InazumaVR/InazumaVR/obj/Debug/net8.0/InazumaVR.csproj.Up2Date

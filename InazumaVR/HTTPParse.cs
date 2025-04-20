@@ -73,6 +73,7 @@ class HttpParse{
    
 
     public bool HasNickname(Player player,HtmlDocument document){
+        
         HtmlNode node = document.DocumentNode.SelectSingleNode("//div[@data-source='nickname_dub']");
         if(node!=null){
             player.dubNick = document.DocumentNode.SelectSingleNode("//div[@data-source='nickname_dub']/div").InnerText.Split(' ')[0];
@@ -98,7 +99,9 @@ class HttpParse{
         
         if(HasNickname(player,document) ){
             //get "also known as <name> d
-            HtmlNodeCollection nodes = document.DocumentNode.SelectNodes("//div[@class='mw-parser-output']/b");
+        if(player.dubName == player.dubNick || player.dubName == "Byron Love"){
+            HtmlNodeCollection nodes = document.DocumentNode.SelectNodes("//div[@class='mw-content-ltr mw-parser-output']/b");
+            
             if(nodes.Count>1){
                 if(player.dubName == player.dubNick ){
                     subName = nodes[1].InnerText;
@@ -106,6 +109,7 @@ class HttpParse{
             player.subNick = nodes[1].InnerText;
                 }
             }
+        }
         }
         player.isMale = IsMale(document);
         player.setSubNames(subName);
@@ -117,6 +121,7 @@ class HttpParse{
     public void getName(Skill skill){
          string currentURL = baseURL + skill.dubName.Replace(" ","_");
         string newURL = GetFinalRedirect(currentURL);
+        newURL = newURL.Replace("%27","'");
         string subName = newURL.Replace(baseURL,"").Replace('_',' ');
 
         skill.subName = subName;

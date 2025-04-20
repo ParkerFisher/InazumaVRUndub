@@ -7,9 +7,9 @@ public class Skill{
     public Skill(){
 
     }
-    public Skill(string dubName)
+    public Skill(string _dubName)
     {
-        dubName = dubName;
+        dubName = _dubName;
     }
 
 }
